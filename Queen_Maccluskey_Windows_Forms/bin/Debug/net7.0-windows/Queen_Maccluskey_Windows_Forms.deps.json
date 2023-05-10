@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Queen_Maccluskey_Windows_Forms/1.0.0": {
+        "runtime": {
+          "Queen_Maccluskey_Windows_Forms.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Queen_Maccluskey_Windows_Forms/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
