@@ -38,7 +38,7 @@
             this.submitBtn = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.resultBox = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
@@ -115,7 +115,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(97, 488);
+            this.linkLabel1.Location = new System.Drawing.Point(88, 488);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(276, 15);
             this.linkLabel1.TabIndex = 9;
@@ -131,13 +131,13 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Result : ";
             // 
-            // richTextBox1
+            // resultBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(121, 140);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(656, 345);
-            this.richTextBox1.TabIndex = 11;
-            this.richTextBox1.Text = "";
+            this.resultBox.Location = new System.Drawing.Point(121, 140);
+            this.resultBox.Name = "resultBox";
+            this.resultBox.Size = new System.Drawing.Size(656, 345);
+            this.resultBox.TabIndex = 11;
+            this.resultBox.Text = "";
             // 
             // label6
             // 
@@ -151,7 +151,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(404, 488);
+            this.label7.Location = new System.Drawing.Point(370, 488);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 15);
             this.label7.TabIndex = 13;
@@ -160,9 +160,9 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(518, 490);
+            this.linkLabel2.Location = new System.Drawing.Point(413, 488);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(60, 15);
+            this.linkLabel2.Size = new System.Drawing.Size(375, 15);
             this.linkLabel2.TabIndex = 14;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "https://github.com/ArashAslani/Queen_Maccluskey_Windows_Forms";
@@ -175,7 +175,7 @@
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.resultBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.submitBtn);
@@ -206,7 +206,7 @@
         private Button submitBtn;
         private LinkLabel linkLabel1;
         private Label label5;
-        private RichTextBox richTextBox1;
+        private RichTextBox resultBox;
         private Label label6;
         private Label label7;
         private LinkLabel linkLabel2;

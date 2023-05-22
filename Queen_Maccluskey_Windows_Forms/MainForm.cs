@@ -6,5 +6,6 @@ namespace Queen_Maccluskey_Windows_Forms
         {
             InitializeComponent();
         }
+        
     }
 }
