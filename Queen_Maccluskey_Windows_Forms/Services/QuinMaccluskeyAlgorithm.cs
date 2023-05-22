@@ -45,6 +45,7 @@ namespace Queen_Maccluskey_Windows_Forms.Services
 
             List<Minterm> pis = FindPrimeIplicants(allMinterms, numVariables);
             List<Minterm> epis = FindEssentialPrimeImplicants(minterms, pis);
+            List<Minterm> simplifiedTerms = Simplify(pis, epis, minterms);
 
 
             return "";
@@ -208,7 +209,64 @@ namespace Queen_Maccluskey_Windows_Forms.Services
             return false;
         }
 
-        
+        static List<Minterm> Simplify(List<Minterm> pis, List<Minterm> epis, List<Minterm> minterms)
+        {
+            List<Minterm> pimeImplicants = new(pis);
+            List<Minterm> essentialIPrimemplicants = new(epis);
+            List<Minterm> mintremsList = new(minterms);
+            // Simplify using the essential prime implicants
+            List<Minterm> simplifiedTerms = essentialIPrimemplicants.Select(epi => epi).ToList();
+
+            // Remove minterms covered by essential prime implicants
+            mintremsList.RemoveAll(m => essentialIPrimemplicants.Any(epi => epi.CombinedTerms.Any(term => term == m.Decimal)));
+            pimeImplicants.RemoveAll(epi => essentialIPrimemplicants.Any(term => term.Binary == epi.Binary));
+
+            // Iterate through the PIs and calculate the priority based on the number of combined minterms
+            foreach (Minterm pi in pimeImplicants)
+            {
+                int priority = 0;
+
+                // Count the number of combined minterms that have the correct value
+                foreach (int combinedMinterm in pi.CombinedTerms)
+                {
+                    if (mintremsList.Select(x => x.Decimal).Contains(combinedMinterm))
+                    {
+                        priority++;
+                    }
+                }
+
+                // Assign the priority to the PI
+                pi.SetPriority(priority);
+            }
+
+            // Sort the PIs based on priority
+            pimeImplicants = pimeImplicants.OrderByDescending(pi => pi.Priority).ToList();
+
+
+            List<Minterm> coveredMinterms = new();
+            // Set the remaining prime implicants
+            foreach (Minterm primeImplicant in pimeImplicants)
+            {
+                if (mintremsList.Count == 0)
+                    break;
+
+                // Check if the prime implicant covers any remaining minterms
+                coveredMinterms = mintremsList
+                    .Where(m => IsMintermCovered(primeImplicant, m))
+                    .ToList();
+
+                if (coveredMinterms.Count > 0)
+                {
+                    simplifiedTerms.Add(primeImplicant);
+                    mintremsList.RemoveAll(m => primeImplicant.CombinedTerms.Any(term => term == m.Decimal));
+                }
+            }
+
+            // Sort the terms based on their binary values
+            simplifiedTerms = simplifiedTerms.OrderBy(term => term.Binary).ToList();
+
+            return simplifiedTerms;
+        }
 
 
     }
