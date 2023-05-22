@@ -126,9 +126,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 143);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(8, 140);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 15);
+            this.label5.Size = new System.Drawing.Size(108, 37);
             this.label5.TabIndex = 10;
             this.label5.Text = "Result : ";
             // 
@@ -191,7 +192,7 @@
             this.Controls.Add(this.MintermsTextBox);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Quin Macclusky calculator";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.variableNumericUpDown)).EndInit();
             this.ResumeLayout(false);

@@ -1,0 +1,17 @@
+D:\C#_Practices\Queen_Maccluskey\Queen_Maccluskey_Windows_Forms\bin\Release\net7.0-windows\Queen_Maccluskey_Windows_Forms.exe
+D:\C#_Practices\Queen_Maccluskey\Queen_Maccluskey_Windows_Forms\bin\Release\net7.0-windows\Queen_Maccluskey_Windows_Forms.deps.json
+D:\C#_Practices\Queen_Maccluskey\Queen_Maccluskey_Windows_Forms\bin\Release\net7.0-windows\Queen_Maccluskey_Windows_Forms.runtimeconfig.json
+D:\C#_Practices\Queen_Maccluskey\Queen_Maccluskey_Windows_Forms\bin\Release\net7.0-windows\Queen_Maccluskey_Windows_Forms.dll
+D:\C#_Practices\Queen_Maccluskey\Queen_Maccluskey_Windows_Forms\bin\Release\net7.0-windows\Queen_Maccluskey_Windows_Forms.pdb
+D:\C#_Practices\Queen_Maccluskey\Queen_Maccluskey_Windows_Forms\obj\Release\net7.0-windows\Queen_Maccluskey_Windows_Forms.csproj.AssemblyReference.cache
+D:\C#_Practices\Queen_Maccluskey\Queen_Maccluskey_Windows_Forms\obj\Release\net7.0-windows\Queen_Maccluskey_Windows_Forms.MainForm.resources
+D:\C#_Practices\Queen_Maccluskey\Queen_Maccluskey_Windows_Forms\obj\Release\net7.0-windows\Queen_Maccluskey_Windows_Forms.csproj.GenerateResource.cache
+D:\C#_Practices\Queen_Maccluskey\Queen_Maccluskey_Windows_Forms\obj\Release\net7.0-windows\Queen_Maccluskey_Windows_Forms.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#_Practices\Queen_Maccluskey\Queen_Maccluskey_Windows_Forms\obj\Release\net7.0-windows\Queen_Maccluskey_Windows_Forms.AssemblyInfoInputs.cache
+D:\C#_Practices\Queen_Maccluskey\Queen_Maccluskey_Windows_Forms\obj\Release\net7.0-windows\Queen_Maccluskey_Windows_Forms.AssemblyInfo.cs
+D:\C#_Practices\Queen_Maccluskey\Queen_Maccluskey_Windows_Forms\obj\Release\net7.0-windows\Queen_Maccluskey_Windows_Forms.csproj.CoreCompileInputs.cache
+D:\C#_Practices\Queen_Maccluskey\Queen_Maccluskey_Windows_Forms\obj\Release\net7.0-windows\Queen_Maccluskey_Windows_Forms.dll
+D:\C#_Practices\Queen_Maccluskey\Queen_Maccluskey_Windows_Forms\obj\Release\net7.0-windows\refint\Queen_Maccluskey_Windows_Forms.dll
+D:\C#_Practices\Queen_Maccluskey\Queen_Maccluskey_Windows_Forms\obj\Release\net7.0-windows\Queen_Maccluskey_Windows_Forms.pdb
+D:\C#_Practices\Queen_Maccluskey\Queen_Maccluskey_Windows_Forms\obj\Release\net7.0-windows\Queen_Maccluskey_Windows_Forms.genruntimeconfig.cache
+D:\C#_Practices\Queen_Maccluskey\Queen_Maccluskey_Windows_Forms\obj\Release\net7.0-windows\ref\Queen_Maccluskey_Windows_Forms.dll
