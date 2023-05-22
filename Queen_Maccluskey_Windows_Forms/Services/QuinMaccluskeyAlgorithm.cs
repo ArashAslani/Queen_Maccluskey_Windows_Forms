@@ -47,6 +47,8 @@ namespace Queen_Maccluskey_Windows_Forms.Services
             List<Minterm> epis = FindEssentialPrimeImplicants(minterms, pis);
             List<Minterm> simplifiedTerms = Simplify(pis, epis, minterms);
 
+            string SimplifiedExpressionStr = GetSimplifiedExpression(simplifiedTerms);
+
 
             return "";
         }
@@ -268,6 +270,32 @@ namespace Queen_Maccluskey_Windows_Forms.Services
             return simplifiedTerms;
         }
 
+        static string GetSimplifiedExpression(List<Minterm> simplifiedTerms)
+        {
+            string expression = "";
 
+            foreach (Minterm term in simplifiedTerms)
+            {
+                string termString = "";
+
+                for (int i = 0; i < numVariables; i++)
+                {
+                    if (term.Binary[i] == '0')
+                    {
+                        termString += (char)('A' + i) + "'";
+                    }
+                    else if (term.Binary[i] == '1')
+                    {
+                        termString += (char)('A' + i);
+                    }
+                }
+
+                expression += termString + " + ";
+            }
+
+            expression = expression.TrimEnd('+', ' ');
+
+            return expression;
+        }
     }
 }
