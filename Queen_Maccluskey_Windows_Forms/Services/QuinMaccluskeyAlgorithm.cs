@@ -3,21 +3,53 @@ using System.Text;
 
 namespace Queen_Maccluskey_Windows_Forms.Services
 {
-    public class QuinMaccluskeyAlgorithm
+    public class QuinMaccluskeyAlgorithm 
     {
         private static int numVariables;
 
-        public string MQCalculator(string mintermsStr, string dontCaresStr, int numeOfVariblesInput)
+        public string MQCalculator(string mintermsStr, string dontCaresStr, int numeberOfVariblesInput)
         {
             //Get inputs
-            numVariables = numeOfVariblesInput;
+            numVariables = numeberOfVariblesInput;
+            if(numVariables > 26 || numVariables == 0)
+            {
+                return "Number of varibles is out of range.\n\t 0 < numeber of varibles Input < 26";
+            }
 
-            List<int> mintermsList = mintermsStr.Split(',').Select(int.Parse).ToList();
+            List<int> mintermsList = new();
+            try
+            {
+                mintermsList = mintermsStr.Split(',').Select(int.Parse).ToList();
+            }catch(Exception ex)
+            {
+                return $"\tThe entered minterm does not have the correct format,\n\t please enter the desired value in this format: 1,2,4,9,4 \n\n ";
+            }
+            
+            int maxMintermValue = Convert.ToInt32(Math.Pow(2, numVariables));
+            foreach(int m in mintermsList)
+            {
+                if(m > maxMintermValue -1 || m < 0)
+                    return $"Minterm Value is out of range;  0 < minterms < {maxMintermValue}";
+            }
 
             List<int> dontCaresList = new();
-            if (String.IsNullOrWhiteSpace(dontCaresStr))
-                dontCaresList = dontCaresStr.Split(',').Select(int.Parse).ToList();
-
+            if (!String.IsNullOrWhiteSpace(dontCaresStr))
+            {
+                try
+                {
+                    dontCaresList = dontCaresStr.Split(',').Select(int.Parse).ToList();
+                }
+                catch (Exception ex)
+                {
+                    return $"\tThe entered minterm does not have the correct format,\n\t please enter the desired value in this format: 1,2,4,9,4 \n\n ";
+                }
+                foreach (int m in dontCaresList)
+                {
+                    if (m > maxMintermValue - 1 || m < 0)
+                        return $"Minterm Value is out of range;  0 < don't cares < {maxMintermValue}";
+                }
+            }
+           
             List<int> allMintermsInt = new();
 
             // Compare all Minterms
@@ -44,9 +76,12 @@ namespace Queen_Maccluskey_Windows_Forms.Services
                 minterms.Add(minterm);
             }
 
+
             List<Minterm> pis = FindPrimeIplicants(allMinterms, numVariables);
             List<Minterm> epis = FindEssentialPrimeImplicants(minterms, pis);
+
             List<Minterm> simplifiedTerms = Simplify(pis, epis, minterms);
+
 
             string SimplifiedExpressionStr = GetSimplifiedExpression(simplifiedTerms);
 
@@ -213,6 +248,7 @@ namespace Queen_Maccluskey_Windows_Forms.Services
 
             return false;
         }
+
 
         static List<Minterm> Simplify(List<Minterm> pis, List<Minterm> epis, List<Minterm> minterms)
         {

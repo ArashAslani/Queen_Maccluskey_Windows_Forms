@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.MintermsTextBox = new System.Windows.Forms.TextBox();
+            this.DontCaresTextBox = new System.Windows.Forms.TextBox();
             this.variableNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,26 +38,26 @@
             this.submitBtn = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
-            this.resultBox = new System.Windows.Forms.RichTextBox();
+            this.ResultTextBox = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.variableNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // MintermsTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(121, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(656, 23);
-            this.textBox1.TabIndex = 0;
+            this.MintermsTextBox.Location = new System.Drawing.Point(121, 63);
+            this.MintermsTextBox.Name = "MintermsTextBox";
+            this.MintermsTextBox.Size = new System.Drawing.Size(656, 23);
+            this.MintermsTextBox.TabIndex = 0;
             // 
-            // textBox3
+            // DontCaresTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(121, 92);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(656, 23);
-            this.textBox3.TabIndex = 2;
+            this.DontCaresTextBox.Location = new System.Drawing.Point(121, 92);
+            this.DontCaresTextBox.Name = "DontCaresTextBox";
+            this.DontCaresTextBox.Size = new System.Drawing.Size(656, 23);
+            this.DontCaresTextBox.TabIndex = 2;
             // 
             // variableNumericUpDown
             // 
@@ -111,6 +111,7 @@
             this.submitBtn.TabIndex = 8;
             this.submitBtn.Text = "Make it simple";
             this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // linkLabel1
             // 
@@ -131,13 +132,14 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Result : ";
             // 
-            // resultBox
+            // ResultTextBox
             // 
-            this.resultBox.Location = new System.Drawing.Point(121, 140);
-            this.resultBox.Name = "resultBox";
-            this.resultBox.Size = new System.Drawing.Size(656, 345);
-            this.resultBox.TabIndex = 11;
-            this.resultBox.Text = "";
+            this.ResultTextBox.Location = new System.Drawing.Point(121, 140);
+            this.ResultTextBox.Name = "ResultTextBox";
+            this.ResultTextBox.Size = new System.Drawing.Size(656, 345);
+            this.ResultTextBox.TabIndex = 11;
+            this.ResultTextBox.Text = "";
+            this.ResultTextBox.TextChanged += new System.EventHandler(this.resultBox_TextChanged);
             // 
             // label6
             // 
@@ -175,7 +177,7 @@
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.resultBox);
+            this.Controls.Add(this.ResultTextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.submitBtn);
@@ -184,8 +186,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.variableNumericUpDown);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.DontCaresTextBox);
+            this.Controls.Add(this.MintermsTextBox);
             this.Name = "MainForm";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.variableNumericUpDown)).EndInit();
@@ -196,8 +198,8 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox3;
+        private TextBox MintermsTextBox;
+        private TextBox DontCaresTextBox;
         private NumericUpDown variableNumericUpDown;
         private Label label1;
         private Label label2;
@@ -206,7 +208,7 @@
         private Button submitBtn;
         private LinkLabel linkLabel1;
         private Label label5;
-        private RichTextBox resultBox;
+        private RichTextBox ResultTextBox;
         private Label label6;
         private Label label7;
         private LinkLabel linkLabel2;
