@@ -21,5 +21,10 @@ namespace Queen_Maccluskey_Windows_Forms
             var result = mq.MQCalculator(this.MintermsTextBox.Text, this.DontCaresTextBox.Text, numberOfVaribles);
             this.ResultTextBox.Text = result.ToString();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

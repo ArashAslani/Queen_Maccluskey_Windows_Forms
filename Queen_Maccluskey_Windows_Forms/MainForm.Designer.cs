@@ -173,6 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 512);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label7);
@@ -189,7 +190,9 @@
             this.Controls.Add(this.DontCaresTextBox);
             this.Controls.Add(this.MintermsTextBox);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.variableNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
