@@ -44,12 +44,13 @@ namespace Queen_Maccluskey_Windows_Forms.Services
             }
 
             List<Minterm> pis = FindPrimeIplicants(allMinterms, numVariables);
+            List<Minterm> epis = FindEssentialPrimeImplicants(minterms, pis);
 
 
-
+            return "";
         }
 
-        public static int CharacterCounter(char character, string baseStr)
+        static int CharacterCounter(char character, string baseStr)
         {
             return baseStr.Count(c => c == character);
         }
@@ -161,5 +162,54 @@ namespace Queen_Maccluskey_Windows_Forms.Services
 
             return pimeImplicants;
         }
+
+
+        static List<Minterm> FindEssentialPrimeImplicants(List<Minterm> minterms, List<Minterm> primeImplicants)
+        {
+            List<Minterm> essentialPrimeImplicants = new();
+
+            // Iterate through the minterms
+            foreach (Minterm minterm in minterms)
+            {
+                int count = 0;
+                Minterm coveredMinterm = null;
+
+                // Check if the minterm is covered by only one prime implicant
+                foreach (Minterm primeImplicant in primeImplicants)
+                {
+                    if (IsMintermCovered(primeImplicant, minterm))
+                    {
+                        count++;
+                        coveredMinterm = primeImplicant;
+                    }
+                }
+
+                // If the minterm is covered by only one prime implicant, add it as essential
+                if (count == 1 && !essentialPrimeImplicants.Contains(coveredMinterm))
+                {
+                    essentialPrimeImplicants.Add(coveredMinterm);
+                }
+            }
+
+            return essentialPrimeImplicants;
+        }
+
+        static bool IsMintermCovered(Minterm primeImplicant, Minterm minterm)
+        {
+            // Check if the prime implicant covers the minterm
+            foreach (int combinedTerm in primeImplicant.CombinedTerms)
+            {
+                if (minterm.CombinedTerms.Contains(combinedTerm))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        
+
+
     }
 }
