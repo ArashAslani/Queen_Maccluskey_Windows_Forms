@@ -1,4 +1,5 @@
 ﻿using Queen_Maccluskey_Windows_Forms.Models;
+using System.Text;
 
 namespace Queen_Maccluskey_Windows_Forms.Services
 {
@@ -49,8 +50,10 @@ namespace Queen_Maccluskey_Windows_Forms.Services
 
             string SimplifiedExpressionStr = GetSimplifiedExpression(simplifiedTerms);
 
+            string result = ResultCreator(pis, epis, SimplifiedExpressionStr);
 
-            return "";
+
+            return result;
         }
 
         static int CharacterCounter(char character, string baseStr)
@@ -296,6 +299,16 @@ namespace Queen_Maccluskey_Windows_Forms.Services
             expression = expression.TrimEnd('+', ' ');
 
             return expression;
+        }
+
+
+        static string ResultCreator(List<Minterm> primeImplicants, List<Minterm> essentialPrimeImplicants, string simplifiedExpression)
+        {
+            StringBuilder expression = new StringBuilder();
+            expression.Append($"\nPrime implicants ({primeImplicants.Count}) :{"\n"} {string.Join("\n ", primeImplicants.Select(pi => $"{pi.Binary} {"\t"} m({string.Join(", ", pi.CombinedTerms)})"))}");
+            expression.Append($"\n\nEssential prime implicants ({essentialPrimeImplicants.Count}) :{"\n"} {string.Join("\n ", essentialPrimeImplicants.Select(epi => $"{epi.Binary} {"\t"} m({string.Join(", ", epi.CombinedTerms)})"))}");
+            expression.Append($"\n\n\nResult : {simplifiedExpression}");
+            return expression.ToString();
         }
     }
 }
