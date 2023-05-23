@@ -1,4 +1,4 @@
-﻿namespace Queen_Maccluskey_Windows_Forms
+﻿namespace Quine_Maccluskey_Windows_Forms
 {
     partial class MainForm
     {
@@ -99,10 +99,11 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(195, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(454, 15);
+            this.label4.Size = new System.Drawing.Size(453, 15);
             this.label4.TabIndex = 7;
-            this.label4.Text = "This program simplifies your logical expressions using Quinn McCluskey\'s algorith" +
+            this.label4.Text = "This program simplifies your logical expressions using Quine McCluskey\'s algorith" +
     "m.";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // submitBtn
             // 
@@ -119,10 +120,11 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(88, 488);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(276, 15);
+            this.linkLabel1.Size = new System.Drawing.Size(113, 15);
             this.linkLabel1.TabIndex = 9;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "https://www.linkedin.com/in/arash-aslani-2002-ge";
+            this.linkLabel1.Text = "Arash Aslani Likedin";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label5
             // 
@@ -155,21 +157,22 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(370, 488);
+            this.label7.Location = new System.Drawing.Point(562, 488);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 15);
+            this.label7.Size = new System.Drawing.Size(49, 15);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Github ";
+            this.label7.Text = "Github :";
             // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(413, 488);
+            this.linkLabel2.Location = new System.Drawing.Point(617, 488);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(375, 15);
+            this.linkLabel2.Size = new System.Drawing.Size(160, 15);
             this.linkLabel2.TabIndex = 14;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "https://github.com/ArashAslani/Queen_Maccluskey_Windows_Forms";
+            this.linkLabel2.Text = "Quine Maccluskey repository";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // MainForm
             // 
@@ -194,7 +197,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quin Macclusky calculator";
+            this.Text = "Quine Macclusky calculator";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.variableNumericUpDown)).EndInit();
             this.ResumeLayout(false);

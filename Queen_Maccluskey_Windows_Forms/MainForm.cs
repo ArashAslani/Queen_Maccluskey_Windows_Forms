@@ -1,10 +1,11 @@
-using Queen_Maccluskey_Windows_Forms.Services;
+using Quine_Maccluskey_Windows_Forms.Services;
+using System.Diagnostics;
 
-namespace Queen_Maccluskey_Windows_Forms
+namespace Quine_Maccluskey_Windows_Forms
 {
     public partial class MainForm : Form
     {
-        QuinMaccluskeyAlgorithm mq = new();
+        QuineMaccluskeyAlgorithm mq = new();
         public MainForm()
         {
             InitializeComponent();
@@ -23,6 +24,39 @@ namespace Queen_Maccluskey_Windows_Forms
         }
 
         private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo { FileName = @"https://www.linkedin.com/in/arash-aslani-2002-ge", UseShellExecute = true });
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo { FileName = @"https://github.com/ArashAslani/Quine_Mccluskey_Windows_Forms", UseShellExecute = true });
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //private void InitializeComponent()
+        //{
+        //    this.SuspendLayout();
+        //    // 
+        //    // MainForm
+        //    // 
+        //    this.ClientSize = new System.Drawing.Size(284, 261);
+        //    this.Name = "MainForm";
+        //    this.Load += new System.EventHandler(MainForm_Load_1);
+        //    this.ResumeLayout(false);
+        //
+        //}
+
+        private void MainForm_Load_1(object sender, EventArgs e)
         {
 
         }

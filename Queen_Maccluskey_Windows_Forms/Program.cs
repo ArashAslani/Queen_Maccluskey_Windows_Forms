@@ -1,4 +1,4 @@
-namespace Queen_Maccluskey_Windows_Forms
+namespace Quine_Maccluskey_Windows_Forms
 {
     internal static class Program
     {

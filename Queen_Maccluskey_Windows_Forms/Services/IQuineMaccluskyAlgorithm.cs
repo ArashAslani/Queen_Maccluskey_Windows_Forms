@@ -1,6 +1,6 @@
-﻿namespace Queen_Maccluskey_Windows_Forms.Services
+﻿namespace Quine_Maccluskey_Windows_Forms.Services
 {
-    internal interface IQuinMaccluskyAlgorithm
+    internal interface IQuineMaccluskyAlgorithm
     {
         string MQCalculator(string mintermsStr, string dontCaresStr, int numeOfVariblesInput);
 

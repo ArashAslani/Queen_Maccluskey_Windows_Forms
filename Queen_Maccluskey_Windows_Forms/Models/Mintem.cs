@@ -1,4 +1,4 @@
-﻿namespace Queen_Maccluskey_Windows_Forms.Models
+﻿namespace Quine_Maccluskey_Windows_Forms.Models
 {
     internal class Minterm
     {

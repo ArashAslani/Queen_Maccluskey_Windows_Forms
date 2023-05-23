@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#_Practices\\Queen_Maccluskey\\Queen_Maccluskey_Windows_Forms\\Queen_Maccluskey_Windows_Forms.csproj",
-      "projectName": "Queen_Maccluskey_Windows_Forms",
-      "projectPath": "D:\\C#_Practices\\Queen_Maccluskey\\Queen_Maccluskey_Windows_Forms\\Queen_Maccluskey_Windows_Forms.csproj",
+      "projectUniqueName": "D:\\C#_Practices\\Queen_Maccluskey\\Queen_Maccluskey_Windows_Forms\\Quine_Maccluskey_Windows_Forms.csproj",
+      "projectName": "Quine_Maccluskey_Windows_Forms",
+      "projectPath": "D:\\C#_Practices\\Queen_Maccluskey\\Queen_Maccluskey_Windows_Forms\\Quine_Maccluskey_Windows_Forms.csproj",
       "packagesPath": "C:\\Users\\Arash\\.nuget\\packages\\",
       "outputPath": "D:\\C#_Practices\\Queen_Maccluskey\\Queen_Maccluskey_Windows_Forms\\obj\\",
       "projectStyle": "PackageReference",

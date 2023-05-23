@@ -1,9 +1,9 @@
-﻿using Queen_Maccluskey_Windows_Forms.Models;
+﻿using Quine_Maccluskey_Windows_Forms.Models;
 using System.Text;
 
-namespace Queen_Maccluskey_Windows_Forms.Services
+namespace Quine_Maccluskey_Windows_Forms.Services
 {
-    public class QuinMaccluskeyAlgorithm 
+    public class QuineMaccluskeyAlgorithm 
     {
         private static int numVariables;
 
