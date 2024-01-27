@@ -1,2 +1,2 @@
-# Queen_Maccluskey_Windows_Forms
-Queen Maccluskey algorithm C#  implimention using  Windows Forms
+# Quine_Mccluskey_Windows_Forms
+Quine Mccluskey algorithm C#  implimention using  Windows Forms
